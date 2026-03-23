@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharma & Biotech Solutions | LINHAI RESIN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arial:wght@400;700;900&display=swap');
+        :root { --primary-color: #C1272D; --secondary-color: #000000; --accent-color: #FFFFFF; --dark-gray: #1a1a1a; --light-gray: #f4f4f5; }
+        body { font-family: 'Arial', sans-serif; color: var(--dark-gray); background-color: var(--accent-color); padding-top: 80px; overflow-x: hidden; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Arial', sans-serif; }
+        .bg-hex { background-image: url("data:image/svg+xml,%3Csvg width='60' height='103.923' viewBox='0 0 60 103.923' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 103.923L0 86.603V51.962L30 34.641l30 17.321v34.64l-30 17.321zm0-3.464l27-15.588v-31.177L30 38.105 3 53.694v31.177l27 15.588z' fill='%23000000' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E"); }
+        .nav-link { position: relative; font-weight: bold; text-transform: uppercase; font-size: 1.125rem; letter-spacing: 0.5px; transition: 0.3s; color: var(--secondary-color); }
+        .nav-link:hover { color: var(--primary-color); }
+        .nav-link::after { content: ''; position: absolute; width: 0; height: 3px; bottom: -4px; left: 0; background-color: var(--primary-color); transition: width 0.3s ease; }
+        .nav-link:hover::after { width: 100%; }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu { display: none; position: absolute; background: white; min-width: 200px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 3px solid var(--primary-color); top: 100%; left: 0; padding: 10px 0; z-index: 100; }
+        .dropdown-item { padding: 10px 20px; display: block; color: black; font-size: 1rem; font-weight: bold; transition: 0.3s; }
+        .dropdown-item:hover { background: var(--light-gray); color: var(--primary-color); padding-left: 25px; }
+        .red-underline-title { display: inline-block; border-bottom: 4px solid var(--primary-color); padding-bottom: 4px; }
+        
+        .btn-primary { background-color: var(--primary-color); color: white; border: 2px solid var(--primary-color); transition: all 0.3s ease; font-weight: bold; text-transform: uppercase; }
+        .btn-primary:hover { background-color: transparent; color: var(--primary-color); }
+        
+        .product-card { transition: all 0.4s ease; border-top: 4px solid transparent; background: white; border: 1px solid #eee; }
+        .product-card:hover { border-top-color: var(--primary-color); transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
+        
+        .hero-section { position: relative; height: 50vh; display: flex; align-items: center; justify-content: center; background-color: var(--secondary-color); overflow: hidden; border-bottom: 8px solid var(--primary-color); }
+        .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; filter: grayscale(100%); }
+    </style>
+</head>
+<body class="bg-hex flex flex-col min-h-screen">
+
+    <!-- 全局统一导航栏 -->
+    <nav class="navbar fixed w-full z-50 bg-white top-0 left-0 border-b border-gray-100 shadow-sm transition-all duration-300" id="main-nav">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="logo.jpg" alt="LINHAI RESIN" class="h-16">
+                <span class="text-3xl font-black text-black tracking-tight" style="font-family: 'Arial Black', Arial, sans-serif;">LINHAI RESIN</span>
+            </a>
+            
+            <div class="hidden lg:flex items-center space-x-8">
+                <div class="relative dropdown py-2">
+                    <a href="about.html" class="nav-link text-black">Company <i class="fas fa-chevron-down text-[10px] ml-1"></i></a>
+                    <div class="dropdown-menu mt-2">
+                        <a href="about.html" class="dropdown-item">About Us</a>
+                        <a href="certifications.html" class="dropdown-item">Certifications & Licenses</a>
+                        <a href="news.html" class="dropdown-item">News & Events</a>
+                    </div>
+                </div>
+                <a href="index.html#rd" class="nav-link text-black">R&D LAB</a>
+                
+                <div class="relative dropdown py-2">
+                    <a href="products.html" class="nav-link text-black">Products <i class="fas fa-chevron-down text-[10px] ml-1"></i></a>
+                    <div class="dropdown-menu mt-2">
+                        <a href="products.html" class="dropdown-item">Product Categories</a>
+                        <a href="tech-share.html" class="dropdown-item">Technical Sharing</a>
+                    </div>
+                </div>
+                
+                <div class="relative dropdown py-2">
+                    <a href="solutions.html" class="nav-link text-red-700 border-b-4 border-red-700 pb-1">System Solutions <i class="fas fa-chevron-down text-[10px] ml-1"></i></a>
+                    <div class="dropdown-menu mt-2">
+                        <a href="solution-water.html" class="dropdown-item">Water Treatment</a>
+                        <a href="solution-pharma.html" class="dropdown-item text-red-700">Pharma & Biotech</a>
+                        <a href="solutions.html" class="dropdown-item">Metallurgy Extraction</a>
+                    </div>
+                </div>
+                
+                <a href="contact.html" class="nav-link text-black">Contact Us</a>
+
+                <div class="relative flex items-center ml-4">
+                    <input type="text" placeholder="Search resin..." class="pl-4 pr-10 py-2 border border-gray-300 rounded focus:outline-none focus:border-red-700 text-sm w-48 transition-all text-black">
+                    <button class="absolute right-3 text-gray-500 hover:text-red-700"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            
+            <button class="lg:hidden text-black text-2xl"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- 首屏横幅 -->
+    <header class="hero-section">
+        <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=1920&q=80" class="hero-bg" alt="Pharma Laboratory Facility">
+        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(193,39,45,0.4) 100%);"></div>
+        <div class="relative z-10 text-center text-white px-4" data-aos="fade-up">
+            <h1 class="text-5xl md:text-6xl font-black uppercase mb-4 tracking-tight">Pharma & Biotech <span class="text-red-600">Solutions</span></h1>
+            <p class="text-xl font-bold tracking-widest uppercase">High-Purity Extraction, Decolorization & Purification</p>
+        </div>
+    </header>
+
+    <!-- 核心内容区 -->
+    <main class="py-24 container mx-auto px-4 flex-grow">
+        <div class="flex flex-col lg:flex-row gap-16">
+            
+            <!-- 左侧：技术与产品介绍 -->
+            <div class="lg:w-2/3" data-aos="fade-right">
+                <h2 class="text-3xl font-black uppercase mb-8 red-underline-title text-black">Biochemical Processing Expertise</h2>
+                <div class="prose max-w-none text-gray-700 leading-relaxed text-lg space-y-6 mb-16">
+                    <p>The purification of pharmaceutical and biotechnical compounds demands specialized, highly porous resin matrices that won't denature sensitive molecules. We provide FDA-compliant and highly regulated resins tailored to life sciences.</p>
+                    <p>Our Macroporous adsorption resins act through Van der Waals forces to successfully separate and refine active pharmaceutical ingredients (APIs), extract antibiotics from fermentation broths, purify plant extracts, and selectively remove toxic proteins or colored bodies.</p>
+                </div>
+
+                <h2 class="text-3xl font-black uppercase mb-8 red-underline-title text-black">Recommended Resins</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- 推荐产品 1 -->
+                    <div class="product-card p-6 flex flex-col justify-between">
+                        <div>
+                            <h4 class="font-black uppercase text-xl text-black mb-2">D101 Macroporous Adsorption</h4>
+                            <p class="text-gray-600 text-sm mb-4">Non-polar resin excellent for extracting saponins, flavonoids, and active plant constituents.</p>
+                        </div>
+                        <a href="product-detail.html" class="text-red-700 font-bold uppercase text-sm hover:text-black transition-colors mt-auto">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                    
+                    <!-- 推荐产品 2 -->
+                    <div class="product-card p-6 flex flex-col justify-between">
+                        <div>
+                            <h4 class="font-black uppercase text-xl text-black mb-2">D301 Macroporous Weak Base</h4>
+                            <p class="text-gray-600 text-sm mb-4">Highly effective for the separation and purification of organic acids and decolorization processes.</p>
+                        </div>
+                        <a href="product-detail.html" class="text-red-700 font-bold uppercase text-sm hover:text-black transition-colors mt-auto">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+
+                    <!-- 推荐产品 3 -->
+                    <div class="product-card p-6 flex flex-col justify-between md:col-span-2 lg:col-span-1">
+                        <div>
+                            <h4 class="font-black uppercase text-xl text-black mb-2">001x4 Low Cross-Linked Gel</h4>
+                            <p class="text-gray-600 text-sm mb-4">Lower cross-linkage provides a larger mesh, suitable for isolating and extracting larger molecular antibiotics like Streptomycin.</p>
+                        </div>
+                        <a href="product-detail.html" class="text-red-700 font-bold uppercase text-sm hover:text-black transition-colors mt-auto">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧：联系表单 -->
+            <div class="lg:w-1/3" data-aos="fade-left">
+                <div class="bg-black p-10 text-white shadow-2xl sticky top-32">
+                    <h3 class="text-2xl font-black uppercase mb-6 border-l-4 border-red-600 pl-4 tracking-widest">Request a Solution</h3>
+                    <p class="text-gray-400 text-sm mb-8 leading-relaxed">Leave your application details and our chemical engineers will contact you within 24 hours.</p>
+                    
+                    <form id="solution-form" class="space-y-6">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Name *</label>
+                            <input type="text" required class="w-full bg-gray-900 border border-gray-700 text-white p-3 outline-none focus:border-red-600 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Email *</label>
+                            <input type="email" required class="w-full bg-gray-900 border border-gray-700 text-white p-3 outline-none focus:border-red-600 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Company Name</label>
+                            <input type="text" class="w-full bg-gray-900 border border-gray-700 text-white p-3 outline-none focus:border-red-600 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Requirements *</label>
+                            <textarea rows="4" required class="w-full bg-gray-900 border border-gray-700 text-white p-3 outline-none focus:border-red-600 transition-colors resize-none" placeholder="Describe your pharmaceutical/biotech extraction needs..."></textarea>
+                        </div>
+                        <button type="submit" id="submit-btn" class="btn-primary w-full py-4 tracking-widest text-sm text-center block">SUBMIT INQUIRY</button>
+                    </form>
+
+                    <!-- 前端拦截成功提示 -->
+                    <div id="success-msg" class="hidden mt-6 bg-green-900 border border-green-500 text-green-100 px-4 py-3 rounded text-sm font-bold text-center">
+                        <i class="fas fa-check-circle mr-2"></i> Inquiry submitted successfully!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 底部统一 Footer -->
+    <footer class="bg-black text-white pt-20 pb-10 border-t-4 border-red-700 mt-auto">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-gray-800 pb-12 mb-10">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-3 mb-6">
+                    <img src="logo.jpg" alt="LINHAI RESIN" class="h-10 filter brightness-0 invert">
+                    <span class="text-2xl font-black tracking-tighter" style="font-family: 'Arial Black', sans-serif;">LINHAI RESIN</span>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed max-w-md mb-8">Mastering polymer synthesis since 1972. We engineer high-performance ion exchange resins for industrial, food, and nuclear sectors globally.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 border border-gray-700 flex items-center justify-center hover:bg-red-700 hover:border-red-700 hover:text-white transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="w-10 h-10 border border-gray-700 flex items-center justify-center hover:bg-red-700 hover:border-red-700 hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 border border-gray-700 flex items-center justify-center hover:bg-red-700 hover:border-red-700 hover:text-white transition-colors"><i class="fab fa-weixin"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-black uppercase mb-6 text-white text-sm tracking-widest border-l-4 border-red-700 pl-3">Products</h4>
+                <ul class="text-gray-400 text-sm space-y-4 font-bold">
+                    <li><a href="products.html" class="hover:text-red-500 transition-colors">Gel Cation</a></li>
+                    <li><a href="products.html" class="hover:text-red-500 transition-colors">Macroporous</a></li>
+                    <li><a href="products.html" class="hover:text-red-500 transition-colors">Chelating</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-black uppercase mb-6 text-white text-sm tracking-widest border-l-4 border-red-700 pl-3">Company</h4>
+                <ul class="text-gray-400 text-sm space-y-4 font-bold">
+                    <li><a href="about.html" class="hover:text-red-500 transition-colors">About Us</a></li>
+                    <li><a href="certifications.html" class="hover:text-red-500 transition-colors">Certifications</a></li>
+                    <li><a href="contact.html" class="hover:text-red-500 transition-colors">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 text-center text-xs text-gray-600 uppercase tracking-widest font-bold">
+            <p>&copy; 2026 Jiangsu Linhai Resin Science And Technology Co., Ltd. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 全局统一 Chatbot -->
+    <div class="fixed bottom-8 right-8 z-[1000] flex flex-col items-end">
+        <div id="chat-panel" class="w-80 bg-white border border-gray-300 shadow-2xl mb-4 flex-col overflow-hidden rounded-t-lg hidden">
+            <div class="bg-black text-white p-4 flex justify-between items-center border-b-4 border-red-600">
+                <span class="font-black uppercase text-sm tracking-widest"><i class="fas fa-robot mr-2 text-red-600"></i> Linhai AI</span>
+                <button onclick="document.getElementById('chat-panel').style.display='none'" class="text-gray-400 hover:text-white transition-colors"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="p-4 bg-gray-50 h-64 overflow-y-auto flex flex-col gap-3" id="chat-messages">
+                <div class="bg-white border border-gray-200 p-3 text-black text-sm shadow-sm rounded">Welcome to Linhai Resin Support. Do you need technical data or a pricing quote?</div>
+            </div>
+            <div class="border-t border-gray-200 p-3 bg-white flex gap-2">
+                <input type="text" id="chat-input" placeholder="Type your message..." class="flex-1 bg-gray-100 border-none px-3 py-2 text-sm text-black focus:outline-none focus:ring-1 focus:ring-red-600 rounded">
+                <button onclick="sendChatMessage()" class="bg-black text-white px-4 py-2 hover:bg-red-600 transition-colors rounded"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+        <button onclick="document.getElementById('chat-panel').style.display='flex'" class="bg-black text-white px-6 py-4 rounded-full font-black uppercase flex items-center gap-3 shadow-xl border-2 border-black hover:border-red-600 hover:text-red-600 transition-colors text-sm tracking-widest">
+            <i class="fas fa-comment-dots text-xl"></i> Support
+        </button>
+    </div>
+
+    <script>
+        // 1. 初始化动画
+        AOS.init({ duration: 800, once: true, offset: 50 });
+
+        // 2. 导航栏滚动效果
+        const navbar = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+
+        // 3. 表单提交前端拦截
+        const form = document.getElementById('solution-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const successMsg = document.getElementById('success-msg');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); 
+            
+            const originalText = submitBtn.innerText;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> PROCESSING...';
+            submitBtn.disabled = true;
+
+            setTimeout(() => {
+                form.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                successMsg.classList.remove('hidden');
+                
+                setTimeout(() => {
+                    successMsg.classList.add('hidden');
+                }, 3000);
+            }, 1200);
+        });
+
+        // 4. 简易聊天机器人交互
+        function sendChatMessage() {
+            const input = document.getElementById('chat-input');
+            const messages = document.getElementById('chat-messages');
+            const text = input.value.trim();
+            
+            if(text) {
+                messages.innerHTML += `<div class="bg-gray-200 text-black p-3 text-sm shadow-sm rounded self-end ml-8">${text}</div>`;
+                input.value = '';
+                messages.scrollTop = messages.scrollHeight;
+                
+                setTimeout(() => {
+                    messages.innerHTML += `<div class="bg-white border border-red-600 border-l-4 p-3 text-black text-sm shadow-sm rounded mr-8">Thank you for your message. A technical engineer will review your inquiry and respond to the email provided shortly.</div>`;
+                    messages.scrollTop = messages.scrollHeight;
+                }, 800);
+            }
+        }
+
+        document.getElementById('chat-input').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                sendChatMessage();
+            }
+        });
+    </script>
+</body>
+</html>
